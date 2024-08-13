@@ -1,0 +1,122 @@
+.header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-align: center;
+  padding: 20px;
+  color: #f5f5dc;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ffffff75;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.header span {
+  position: relative;
+}
+
+.header span::after {
+  content: '';
+  width: 0%;
+  height: 3px;
+  border-radius: 25px;
+  background-color: red;
+  /* display: block; */
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transition: width 0.3s, left 0.3s;
+}
+
+.header span:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+#heroSection {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.business-cards {
+  background-color: #FFFFFF;
+  height: 420px;
+  width: calc(50% - 50px);
+  box-shadow: inset 2px 2px 10px #E1E1E1,inset -2px -2px 10px #E1E1E1;
+  color: #000;
+  /* display: inline-block; */
+  padding: 20px 30px 30px 30px;
+  margin-block: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  #heroSection {
+    flex-flow: column;
+  }
+  .business-cards{
+    width: calc(100% - 50px);
+  }
+}
+
+.cards {
+  height: 100%;
+  background-color: #F8F9FA;
+  border: 1px solid #E1E1E1;
+  border-radius: 12px;
+  padding-top: 40px;
+  padding-left: 30px;
+  box-shadow: 2px 2px 10px #E1E1E1, -2px -2px 10px #E1E1E1;
+  line-height: 3rem;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  text-wrap: nowrap;
+}
+
+.cards .desc {
+  color: #555555;
+}
+
+.cards ul {
+  color: #555555;
+  line-height: 1.2rem;
+}
+
+.cards ul li {
+  list-style-type: none;
+}
+
+.cards .links {
+  margin-top: 20px;
+  display: flex;
+  gap: 25px;
+}
+
+.cards .otherLinks {
+  margin-top: 20px;
+  display: flex;
+  gap: 25px;
+}
+
+.cards button {
+  border: none;
+  background: #007BFF;
+  block-size: 40px;
+  width: 120px;
+  /* padding: 20px 20px; */
+  display: flex;
+  /* flex-flow: row; */
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.cards button a {
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+}

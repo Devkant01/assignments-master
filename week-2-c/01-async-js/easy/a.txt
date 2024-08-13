@@ -1,0 +1,2 @@
+Yes! fs module is working
+This content added through `fs` module
